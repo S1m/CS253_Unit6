@@ -1,0 +1,26 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+  	<link rel="stylesheet" type="text/css" href="/css/main.css">
+    <title>CS 232</title>
+  </head>
+
+  <body>
+    <a href="/" class="main-title">
+	    CS 253 Blog
+  	</a>
+
+	<div id="content">
+	<div class="post">
+		<div class="post-heading">
+			<div class="post-title">{{blog.title}}</div>
+			<div class="post-date">{{blog.created.date().strftime("%B %d, %Y")}}</div>
+		</div>
+		<div class="post-content">{{blog.txt}}</div>
+	</div>
+	<div id="lastHit">Queried {{lastHit}} seconds ago</div>
+  </body>
+
+</html>

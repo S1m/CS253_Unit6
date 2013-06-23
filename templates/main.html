@@ -1,0 +1,31 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+  	<link rel="stylesheet" type="text/css" href="/css/main.css">
+    <title>CS 232</title>
+  </head>
+
+  <body>
+    <a href="/newpost" class="main-title">
+	    CS 253 Blog
+  	</a>
+
+	<div id="content">
+
+    {% for blog in blogs %}
+    	<div class="post">
+    		<div class="post-heading">
+    			<a href="/{{blog.key().id()}}" class="post-title">{{blog.title}}</a>
+    			<div class="post-date">{{blog.created.date().strftime("%B %d, %Y")}}</div>
+    		</div>
+    		<div class="post-content">{{blog.txt}}</div>
+    	</div>
+    	<br><br>
+    {% endfor %}
+
+    <div id="lastHit">Queried {{lastHit}} seconds ago</div>
+  </body>
+
+</html>
